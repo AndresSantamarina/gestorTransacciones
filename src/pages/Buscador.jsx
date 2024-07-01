@@ -9,12 +9,6 @@ const Buscador = () => {
 
   const listaTransacciones = useSelector((state) => state.transacciones.transaccionesFiltradas);
 
-  // const listaTransacciones = useSelector((state) => {
-  //   return state.transacciones.filter(
-  //     (transaccion) => transaccion.categoria === categoriaSeleccionada
-  //   );
-  // });
-
   const handleFiltrar = (e) => {
     const categoria = e.target.value;
     setCategoriaSeleccionada(categoria);

@@ -42,18 +42,11 @@ const transaccionSlice = createSlice({
 
         },
         eliminarTransaccion: (state, action) => {
-            // const { id } = action.payload;
-            // const nuevasTransacciones = state.filter(transaccion => transaccion.id !== id);
-            // guardarTransaccion(nuevasTransacciones);
-            // return nuevasTransacciones
             const { id } = action.payload;
             state.transacciones = state.transacciones.filter(transaccion => transaccion.id !== id);
             guardarTransaccion(state.transacciones);
         },
         buscarTransaccion: (state, action) => {
-            // const { categoria } = action.payload
-            // const transaccionesFiltradas = state.filter(transaccion => transaccion.categoria === categoria)
-            // return transaccionesFiltradas
             const { categoria } = action.payload;
             state.transaccionesFiltradas = state.transacciones.filter(transaccion => transaccion.categoria === categoria);
         }
